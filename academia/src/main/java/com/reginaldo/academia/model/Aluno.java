@@ -29,7 +29,7 @@ public class Aluno {
     private Double medidaBiceps;
     private Double medidaTriceps;
     private Double medidaCintura;
-    private Double medidaCipanturrilha;
+    private Double medidaPanturrilha;
     private Double medidaPeitoral;
     private Double medidaQuadril;
 
@@ -140,12 +140,12 @@ public class Aluno {
         this.medidaCintura = medidaCintura;
     }
 
-    public Double getMedidaCipanturrilha() {
-        return medidaCipanturrilha;
+    public Double getMedidaPanturrilha() {
+        return medidaPanturrilha;
     }
 
-    public void setMedidaCipanturrilha(Double medidaCipanturrilha) {
-        this.medidaCipanturrilha = medidaCipanturrilha;
+    public void setMedidaPanturrilha(Double medidaPanturrilha) {
+        this.medidaPanturrilha = medidaPanturrilha;
     }
 
     public Double getMedidaPeitoral() {
