@@ -114,7 +114,7 @@ public class AlunoService {// declaração da minha classe//
             aluno.setMedidaBiceps(alunoAtualizado.getMedidaBiceps());
             aluno.setMedidaTriceps(alunoAtualizado.getMedidaTriceps());
             aluno.setMedidaCintura(alunoAtualizado.getMedidaCintura());
-            aluno.setMedidaCipanturrilha(alunoAtualizado.getMedidaCipanturrilha());
+            aluno.setMedidaPanturrilha(alunoAtualizado.getMedidaPanturrilha());
             aluno.setMedidaPeitoral(alunoAtualizado.getMedidaPeitoral());
             aluno.setMedidaQuadril(alunoAtualizado.getMedidaQuadril());
 
