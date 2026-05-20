@@ -11,7 +11,7 @@ CREATE TABLE pagamento (
     -- Status atual do pagamento (ex: pago, pendente, cancelado)
     status        VARCHAR(50),
     -- Definição da chave estrangeira que garante integridade referencial com a tabela alunos
-    FOREIGN KEY (aluno_id) REFERENCES alunos(id)
+    FOREIGN KEY (aluno_id) REFERENCES aluno(id)
 );
 
 
