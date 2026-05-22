@@ -1,34 +1,15 @@
-// Pacote onde está localizado esse arquivo — organiza o projeto em pastas
 package com.reginaldo.academia.service;
 
-// Importa a classe List do Java — usada para retornar listas de planos
 import java.util.List;
-
-// Importa o Logger — usado para registrar mensagens no console
 import org.slf4j.Logger;
-
-// Importa o LoggerFactory — usado para criar o Logger
 import org.slf4j.LoggerFactory;
-
-// Importa o HttpStatus — usado para retornar códigos de erro HTTP (400, 404, etc)
 import org.springframework.http.HttpStatus;
-
-// Importa o @Service — diz ao Spring que essa classe é um serviço com regras de negócio
 import org.springframework.stereotype.Service;
-
-// Importa o @Transactional — garante que o banco de dados seja atualizado corretamente
 import org.springframework.transaction.annotation.Transactional;
-
-// Importa o ResponseStatusException — usado para lançar erros HTTP com mensagens
 import org.springframework.web.server.ResponseStatusException;
-
-// Importa a classe PlanoAula — representa a tabela plano_aula do banco de dados
 import com.reginaldo.academia.model.PlanoAula;
-
-// Importa o PlanoAulaRepository — é quem faz as operações no banco de dados
 import com.reginaldo.academia.repository.PlanoAulaRepository;
 
-// Diz ao Spring que essa classe é um Serviço — fica entre o Controller e o Repository
 @Service
 public class PlanoAulaService {
 
