@@ -37,16 +37,14 @@ public class PagamentoService {
         return repository.findAll();
     }
 
-    @Transactional(readOnly = true)
-    public List<Pagamento> buscarPorAluno(Long alunoId) {
-        return repository.findByAlunoId(alunoId);
-    }
-
     @Transactional
-    public void deletar(Long id) {
-        if (!repository.existsById(id)) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Pagamento não encontrado");
-        }
-        repository.deleteById(id);
+public void deletar(Long id) {
+    if (id == null || id <= 0) {
+        throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID inválido");
     }
+    if (!repository.existsById(id)) {
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Pagamento não encontrado");
+    }
+    repository.deleteById(id);
+}
 }

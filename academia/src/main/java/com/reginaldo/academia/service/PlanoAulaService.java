@@ -1,12 +1,14 @@
 package com.reginaldo.academia.service;
 
 import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
+
 import com.reginaldo.academia.model.PlanoAula;
 import com.reginaldo.academia.repository.PlanoAulaRepository;
 
@@ -37,6 +39,9 @@ public class PlanoAulaService {
 
     @Transactional
     public void deletar(Long id) {
+        if (id == null || id <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID inválido");
+        }
         if (!repository.existsById(id)) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Plano não encontrado");
         }
